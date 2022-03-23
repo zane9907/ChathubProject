@@ -33,7 +33,7 @@ namespace Chathub.WPFClient
         {
             if (!IsInDesignMode)
             {
-                Messages = new RestCollection<Message>("http://localhost:43829", "message", "hub");
+                Messages = new RestCollection<Message>("http://localhost:43829/", "message", "hub");
                 SendMessageCommand = new RelayCommand(() =>
                 {
                     Messages.Add(new Message()

@@ -15,10 +15,10 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox ItemsSource="{Binding Messages}">
+        <ListBox MaxWidth="400" ItemsSource="{Binding Messages}">            
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Black" Opacity="80" BorderThickness="2" CornerRadius="30">
+                    <Border Padding="10" BorderBrush="Black" Opacity="80" BorderThickness="2" CornerRadius="30">
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -30,9 +30,9 @@
                                 <RowDefinition Height="1*"/>
                             </Grid.RowDefinitions>
 
-                            <Label Content="{Binding Date}"/>
-                            <Label Content="{Binding Username}" Grid.Column="1"/>
-                            <Label Content="{Binding Content}" Grid.Column="1" Grid.Row="1"/>
+                            <Label Content="{Binding Date}" FontWeight="Bold"/>
+                            <Label Content="{Binding Username}"  FontWeight="Bold" Grid.Column="1"/>
+                            <TextBlock Text="{Binding Content}" MaxWidth="300" TextWrapping="Wrap"  Grid.ColumnSpan="2" Grid.Row="1"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
@@ -40,10 +40,10 @@
         </ListBox>
 
         <StackPanel Grid.Column="1">
-            <Label Padding="10" Content="Username" Background="LightBlue"/>
+            <Label Padding="10"  Content="Username" Background="LightBlue"/>
             <TextBox Padding="10" Text="{Binding NewMessage.Username}"/>
             <Label Padding="10" Content="Message" Background="LightBlue"/>
-            <TextBlock Padding="10,5,5,200" Text="{Binding NewMessage.Content}"/>
+            <TextBox Padding="10,5,5,10" Height="200" Text="{Binding NewMessage.Content}" TextWrapping="Wrap" AcceptsTab="True" AcceptsReturn="True"/>
 
             <Button Command="{Binding SendMessageCommand}" Margin="10" Padding="10" FontSize="16" FontWeight="Bold" Content="Send Message"/>
 

@@ -32,6 +32,7 @@ namespace Chathub.Repository
             {
                 new Message()
                 {
+                    MessageID = 1,
                     Username = "user_1",
                     Content = "I'm user_1",
                     Date = DateTime.Now
