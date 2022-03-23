@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chathub.Logic\Chathub.Logic.csproj" />
+    <ProjectReference Include="..\Chathub.Models\Chathub.Models.csproj" />
+    <ProjectReference Include="..\Chathub.Repository\Chathub.Repository.csproj" />
+  </ItemGroup>
+  
+</Project>
